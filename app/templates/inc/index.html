@@ -1,0 +1,588 @@
+{% extends "base.html" %} 
+
+
+{% load static %}
+<link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/templatemo-eduwell-style.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/lightbox.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/ss.css' %}">
+
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo">
+              {% comment %} <img src="{% static 'assets/images/soft_space1.png' %}" alt="IT Soft Space"> {% endcomment %}
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="#top" {% block active %} class="active"
+                
+              {% endblock active %}>Главное</a></li>
+              <li class="scroll-to-section"><a href="#services">Сервисы</a></li>
+              <li class="scroll-to-section"><a href="#courses">Курсы</a></li>
+              <li class="has-sub">
+                <a href="javascript:void(0)">Страница</a>
+                <ul class="sub-menu">
+                  <li><a href="{% url 'about' %}">О нас</a></li>
+                  <li><a href="#">Наши Курсы</a></li>
+                  <li><a href="contact-us.html">Контакты</a></li>
+                </ul>
+              </li>
+              <li class="scroll-to-section"><a href="#testimonials">Отзывы</a></li>
+              <li class="scroll-to-section"><a href="#contact-section">Контакты</a></li>
+            </ul>
+            <a class='menu-trigger'>
+              <span>Меню</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  ***** Header Area End ***** -->
+
+{% block title %}IT Soft Space{% endblock title %}
+{% block blockcontent %}
+  
+  <!-- ***** Main Banner Area Start ***** -->
+  <section class="main-banner" id="top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center">
+          <div class="header-text">
+            <h6>Добро пожаловать в наши Курсы</h6>
+            <h2>Лучшее место для изучение <em>It!</em></h2>
+            <div class="main-button-gradient">
+              <div class="scroll-to-section"><a href="#contact-section">Присоединяйтесь к нам!</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="right-image">
+            <img src="{% static 'assets/images/banner-right-image.png' %}" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ***** Main Banner Area End ***** -->
+
+  <section class="services" id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h6>Наши Сервисы</h6>
+            <h4>Все наши <em>Услуги</em></h4>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="owl-service-item owl-carousel">
+            <div class="item">
+              <div class="service-item">
+                <div class="icon">
+                  <img src="{% static 'assets/images/service-icon-01.png' %}" alt="">
+                </div>
+                <h4>Наша методика</h4>
+                <p>Мы в "IT Soft Space" разработали новую методику обучение программирование которое не имеет аналогов в
+                  Кыргызстане.</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="service-item">
+                <div class="icon">
+                  <img src="{% static 'assets/images/service-icon-02.png' %}" alt="">
+                </div>
+                <h4>Креативные решении</h4>
+                <p>Наша команда разроботают индивидуально к каждому клиенту новый дизайн.</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="service-item">
+                <div class="icon">
+                  <img src="{% static 'assets/images/service-icon-03.png'%}" alt="">
+                </div>
+                <h4>Библиотека</h4>
+                <p>Мы имеем больщой ресурс в плане материала обучение как в книжном так и в цифровом.</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="service-item">
+                <div class="icon">
+                  <img src="{% static 'assets/images/service-icon-04.png' %}" alt="">
+                </div>
+                <h4>Технологии</h4>
+                <p>Мы используем новую передовую технологию и так же с каждым днём мы изучаем и обновляем.</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="service-item">
+                <div class="icon">
+                  <img src="{% static 'assets/images/service-icon-01.png' %}" alt="">
+                </div>
+                <h4>Наша Методика</h4>
+                <p>Методика состоит из 30 Теория и 70 практика.</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="service-item">
+                <div class="icon">
+                  <img src="{% static 'assets/images/service-icon-04.png' %}" alt="">
+                </div>
+                <h4>Решение</h4>
+                <p>Кажому решению мы потходим с логикой и кретивом.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="our-courses" id="courses">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading">
+            <a href="{% url 'service' %}"><h6>Наши Курсы</h6></a>
+            <h4>Что ты можешь <em>Изучить</em></h4>
+            <p>У нас ты можешь научиться програмировать на таких языках как Python ияя JavaScript</p>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="naccs">
+            <div class="tabs">
+              <div class="row">
+                <div class="col-lg-3">
+                  <div class="menu">
+                    <div class="active gradient-border"><span>1 Step (Для детей)</span></div>
+                    <div class="gradient-border"><span>Графический Дизайн</span></div>
+                    <div class="gradient-border"><span>Frontend</span></div>
+                    <div class="gradient-border"><span>Backend</span></div>
+                  </div>
+                </div>
+                <div class="col-lg-9">
+                  <ul class="nacc">
+                    <li class="active">
+                      <div>
+                        <div class="left-image">
+                          <img src="{% static 'assets/images/courses-01.jpg' %}" alt="">
+                          <div class="price">
+                            <h6>20000 сом</h6>
+                          </div>
+                        </div>
+                        <div class="right-content">
+                          <h4>1 Step( Для детей)</h4>
+                          <p>Програмирование для детей состоит из Web игр по програмированию таких как Snatch, Coding
+                            camp и CodeCombat.
+                            <br><br>Так же научим сосдовать простые сайты и игры на C++, так же на этом курсе научим
+                            HTML, CSS.
+                          </p>
+                          <span>100 Часов</span>
+                          <span>4 Месяца</span>
+                          <span class="last-span">8 Проектов</span>
+                          <div class="text-button">
+                            <a href="{% url 'contact' %}">Записаться на курс</a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="left-image">
+                          <img src="{% static 'assets/images/courses-02.jpg' %}" alt="">
+                          <div class="price">
+                            <h6>16000 сом</h6>
+                          </div>
+                        </div>
+                        <div class="right-content">
+                          <h4>Графический Дизайн</h4>
+                          <p>Мы обучим вас таким программам как Adobe и CorelDraw, WebStorm так же научим проектироавть
+                            сайты и Брэдбук и Бранч Бук.<br><br></p>
+                          <span>64 Часов</span>
+                          <span>2 Месяца</span>
+                          <span class="last-span">4 Проекта</span>
+                          <div class="text-button">
+                            <a href="contact-us.html">Записаться на курс</a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="left-image">
+                          <img src="{% static 'assets/images/courses-03.jpg' %}" alt="">
+                          <div class="price">
+                            <h6>50000 0000сом</h6>
+                          </div>
+                        </div>
+                        <div class="right-content">
+                          <h4>Frontend</h4>
+                          <p>На курсе по frontend’у вы научитесь:
+
+                            Верстать сайты и оживлять статичные веб-страницы, т.е. освоите:
+                            - HTML (разметка страниц)
+                            - CSS (стили)
+                            - JavaScript (язык программирования, который отвечает за интерактив на сайте)
+                            - Препроцессоры и фреймворки CSS, системы контроля версий.
+                            Адаптивной и кроссбраузерной верстке.</p>
+                          <span>200 Часов</span>
+                          <span>6 месяцев</span>
+                          <span class="last-span">15 Проектов</span>
+                          <div class="text-button">
+                            <a href="contact-us.html">Записаться на курс</a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="left-image">
+                          <img src="{% static 'assets/images/courses-04.jpg' %}" alt="">
+                          <div class="price">
+                            <h6>50000 сом</h6>
+                          </div>
+                        </div>
+                        <div class="right-content">
+                          <h4>Backend</h4>
+                          <p>Обучение программно-аппаратной части сервиса, отвечающая за функционирование его внутренней
+                            части так же базы данных</p>
+                          <span>200 Часов</span>
+                          <span>6 месяцев</span>
+                          <span class="last-span">12 Проектов</span>
+                          <div class="text-button">
+                            <a href="contact-us.html">Записаться на курс</a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="simple-cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 offset-lg-1">
+          <div class="left-image">
+            <img src="{% static 'assets/images/cta-left-image.png' %}" alt="">
+          </div>
+        </div>
+        <div class="col-lg-5 align-self-center">
+          <h6>Получите Скидку сейчас до 16 мая!</h6>
+          <h4>На покупку второго курса 30% скидки</h4>
+          <p>Так же есть оплата в рассрочку через банк.</p>
+          <div class="white-button">
+            <a href="{% url 'cource' %}">Наши курсы</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h6>Цитаты</h6>
+            <h4>В мире технологии <em> Топ Программистов</em></h4>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="owl-testimonials owl-carousel" style="position: relative; z-index: 5;">
+            <div class="item">
+              <p>“Программирование сегодня — это гонка разработчиков программ, стремящихся писать программы с большей и
+                лучшей идиотоустойчивостью, и вселенной, которая пытается создать больше отборных идиотов. Пока
+                вселенная побеждает”</p>
+              <h4>Джеймс Ричард Кук</h4>
+              <span>Писатель &amp;Инженер</span>
+              <img src="{% static 'assets/images/quote.png' %}" alt="">
+            </div>
+            <div class="item">
+              <p>“Низкоуровневый язык — это когда требуется внимание к вещам, которые никак не связаны с программами на
+                этом языке”</p>
+              <h4>Алан Джей Перлис</h4>
+              <span>Создатель ЭВМ Whirlwind</span>
+              <img src="{% static 'assets/images/quote.png' %}" alt="">
+            </div>
+            <div class="item">
+              <p>“Программирование на С похоже на быстрые танцы на только что отполированном полу людей с острыми
+                бритвами в руках”</p>
+              <h4>Валди Равенс</h4>
+              <span>Хаккер</span>
+              <img src="{% static 'assets/images/quote.png' %}" alt="">
+            </div>
+            <div class="item">
+              <p>“Не волнуйтесь, если что-то не работает. Если бы всё работало, вас бы уволили.”</p>
+              <h4>Том Редминд</h4>
+              <span>Один из создателей C#</span>
+              <img src="{% static 'assets/images/quote.png' %}" alt="">
+            </div>
+            <div class="item">
+              <p>“В хорошем дизайне добавление чего-то стоит дешевле, чем сама эта вещь.”</p>
+              <h4>Том Гейл</h4>
+              <span>Авто дизайнер</span>
+              <img src="{% static 'assets/images/quote.png' %}" alt="">
+            </div>
+            <div class="item">
+              <p>“Я изобрел понятие «объектно-ориентированный», и могу заявить, что не имел в виду C++.”</p>
+              <h4>Алан Кёртис Кэй</h4>
+              <span>Создатель ООП</span>
+              <img src="{% static 'assets/images/quote.png' %}" alt="">
+            </div>
+            <div class="item">
+              <p>“Измерять продуктивность программиста подсчетом строк кода — это так же, как оценивать постройку
+                самолета по его весу.”</p>
+              <h4>Билл Гейтс</h4>
+              <span>Основатель Майкрософт</span>
+              <img src="{% static 'assets/images/quote.png' %}" alt="">
+            </div>
+            <div class="item">
+              <p>“Многие из вас знакомы с достоинствами программиста. Их всего три, и разумеется это: лень,
+                нетерпеливость и гордыня.”</p>
+              <h4>Ларри Уолл</h4>
+              <span>Создатель Perl</span>
+              <img src="{% static 'assets/images/quote.png' %}" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-us" id="contact-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div id="map">
+
+            <!-- You just need to go to Google Maps for your own map point, and copy the embed code from Share -> Embed a map section -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m20!1m8!1m3!1d477.8959487230602!2d72.80310778523224!3d40.51381180426221!3m2!1i1024!2i768!4f13.1!4m9!3e6!4m3!3m2!1d40.5137985!2d72.8034042!4m3!3m2!1d40.5138077!2d72.80340009999999!5e1!3m2!1sru!2skg!4v1651215818219!5m2!1sru!2skg"
+              width="100%" height="420px" frameborder="0"
+              style="border:0; border-radius: 15px; position: relative; z-index: 0;" style="border:0;"
+              allowfullscreen=""></iframe>
+            <div class="row">
+              <div class="col-lg-4 offset-lg-1">
+                <div class="contact-info">
+                  <div class="icon">
+                    <i class="fa fa-phone"></i>
+                  </div>
+                  <h4>Телефон</h4>
+                  <span>0704768076</span>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="contact-info">
+                  <div class="icon">
+                    <i class="fa fa-phone"></i>
+                  </div>
+                  <h4>Телефон</h4>
+                  <span>0551855955</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <form id="contact" action="" method="POST">
+            {% csrf_token %}
+
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="section-heading">
+                  <h6>Напишите нам</h6>
+                  <h4>Скажите <em>Привет</em></h4>
+                  <p>
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <input type="text" name="name"  placeholder="ФИО" autocomplete="on" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <input type="tel" name="number" id="number" pattern="[^ @]*@[^ @]*" placeholder="Номер телеофна" required="">
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Почта" required="">
+                </fieldset>
+           
+              <span></span>
+              <p></p>
+              <div class="col-lg-12">
+                <fieldset>
+                  <textarea name="message" id="message" placeholder="Ваше письмо"></textarea>
+                </fieldset>
+              </div>   </div>
+              <span class="q" >Что вас интерисует?</span>
+              <div class="option">
+                <label class="check">
+                  <span class="te">Frontend</span>
+                  <input class="check_input" value="Frontend" name="front" type="checkbox">
+                  
+                   
+                  
+                </label>
+                <label class="check"> Backend <span class="check_box"> </span>
+                 
+                  <input class="check_input" value="Backend" name="backend" type="checkbox">
+                  
+                </label>
+                <label class="check"> <span class="check_box"> </span>  UX-UI
+                  <input class="check_input" value="UI-UX" name="ux" type="checkbox">
+                
+                </label>
+                <label class="check"> <span class="check_box"> </span>1-step( Для детей)
+                  <input class="check_input" value="1-step ( Для детей) " name="step" type="checkbox">
+                  
+                </label>
+              </div>
+              <style>
+                .option{
+                  display: inline;
+                  /* margin: 10px; */
+                }
+                .q{
+                  text-align: center;
+                  
+                }
+                /* .check_box{
+                  position: absolute;
+                  width: 1em;
+                  height: 1em;
+                  background-color: url();
+                } */
+                .check{
+                  /* padding-left: 1.2em; */
+                  margin-left: 0.50em;
+
+                }
+                .check_box{
+                position: absolute;
+                width: 1em;
+                height: 1em;
+                margin-left: -1.2em;
+                background-color: url(off.svg);
+  }
+                /* .check_input{ */
+                  /* position: absolute;
+                  -webkit-appearance: none;
+                  -moz-appearance: none;
+                  appearance: none; */
+                /* }   */
+              </style>
+ 
+            
+ 
+
+              
+                <fieldset>
+                  <button type="submit" id="form-submit" class="main-gradient-button">Отправить</button>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-12">
+          <ul class="social-icons">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-rss"></i></a></li>
+            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-lg-12">
+          <p class="copyright">Copyright © 2022 IT Soft Space Co., Ltd. All Rights Reserved.
+
+            <br>Дизайн: <a rel="sponsored" href="https://templatemo.com" target="_blank">Martan</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+  {% endblock blockcontent %}
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  <script src="{% static 'assets/js/isotope.min.js' %}"></script>
+  <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+  <script src="{% static 'assets/js/lightbox.js' %}"></script>
+  <script src="{% static 'assets/js/tabs.js' %}"></script>
+  <script src="{% static 'assets/js/video.js' %}"></script>
+  <script src="{% static 'assets/js/slick-slider.js' %}"></script>
+  <script src="{% static 'assets/js/custom.js' %}"></script>
+  <script>
+    //according to loftblog tut
+    $('.nav li:first').addClass('active');
+
+    var showSection = function showSection(section, isAnimate) {
+      var
+        direction = section.replace(/#/, ''),
+        reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+        reqSectionPos = reqSection.offset().top - 0;
+
+      if (isAnimate) {
+        $('body, html').animate({
+          scrollTop: reqSectionPos
+        },
+          800);
+      } else {
+        $('body, html').scrollTop(reqSectionPos);
+      }
+
+    };
+
+    var checkSection = function checkSection() {
+      $('.section').each(function () {
+        var
+          $this = $(this),
+          topEdge = $this.offset().top - 80,
+          bottomEdge = topEdge + $this.height(),
+          wScroll = $(window).scrollTop();
+        if (topEdge < wScroll && bottomEdge > wScroll) {
+          var
+            currentId = $this.data('section'),
+            reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+          reqLink.closest('li').addClass('active').
+            siblings().removeClass('active');
+        }
+      });
+    };
+
+    $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+      e.preventDefault();
+      showSection($(this).attr('href'), true);
+    });
+
+    $(window).scroll(function () {
+      checkSection();
+    });
+  </script>
+</body>
+
+</html>

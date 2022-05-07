@@ -1,0 +1,412 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>IT Soft Space</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-eduwell-style.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+<!--
+
+TemplateMo 573 EduWell
+
+https://templatemo.com/tm-573-eduwell
+
+-->
+  </head>
+
+<body>
+  {% block title %}О нас{% endblock title %}
+  
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                <nav class="main-nav">
+                  <!-- ***** Logo Start ***** -->
+                  <a href="{% url 'index' %}" class="logo"> <span>IT Soft Space</span></a>
+                  <!-- ***** Logo End ***** -->
+                  <!-- ***** Menu Start ***** -->
+                  <ul class="nav">
+                    <li><a href="{% url 'index' %}" class="active">Главное</a></li>
+                    <li><a href="{% url 'index' %}">Сервисы</a></li>
+                    <li><a href="{% url 'cource' %}">Курсы</a></li>
+                    <li class="has-sub">
+                        <a href="javascript:void(0)">Страницы</a>
+                        <ul class="sub-menu">
+                            <li><a href="{% url 'about' %}">О Нас</a></li>
+                            <li><a href="{% url 'service' %}">Наши Сервисы</a></li>
+                            <li><a href="{% url 'contact' %}">Контакты</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{% url 'index' %}">Цитаты</a></li> 
+                    <li><a href="{% url 'contact' %}">Контакты</a></li> 
+                </ul>         
+                  <a class='menu-trigger'>
+                      <span>Меню</span>
+                  </a>
+                  <!-- ***** Menu End ***** -->
+                </nav>
+              </div>
+          </div>
+      </div>
+  </header>
+  {% block blockcontent %}
+  <!-- ***** Header Area End ***** -->
+  {% load static %}
+  <section class="page-heading">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="header-text">
+            <h4></h4>
+            <h1>Больше о нас</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="get-info">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="left-image">
+            <img src="{% static 'assets/images/about-left-image.png' %}" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 align-self-center">
+          <div class="section-heading">
+            
+            <h4>Больше <em>о нас</em></h4>
+            <p>Наша оброзовательная платформа занимаеться не только обучением в сфере ИТ но и многие другие востребованные сферы в деятельности <strong>Кыргызстана </strong><br>Так же наши выпустники смогут работать в компаниях с которыми мы сотрудничаем <br>Это топ компании в каждой сфере нашей деятельности</p>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="info-item">
+                <div class="icon">
+                  <img src="{% static 'assets/images/service-icon-01.png' %}" alt="">
+                </div>
+                <h4>Лучшая Стратегия обучение</h4>
+                <p>Совместно с нашими преподователями и с работниками ИТ отдела мы разроботали лучшую методику обучение так же у нас были консультации с топ ИТ академиями в Кыргызстане.</p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="info-item">
+                <div class="icon">
+                  <img src="{% static 'assets/images/service-icon-02.png' %}" alt="">
+                </div>
+                <h4>Креативный подход к обучению</h4>
+                <p>У нас наши обучающийся будут не только обучаться но и успеют развлекаться, туры в ИТ компании,устраивать пикники в горах, развивающие игры .</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="our-team">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading">
+            <h6>Наша Команда</h6>
+            <h4>Состав <em>Преподователей</em></h4>
+          </div>
+        </div>
+
+        <div class="col-lg-10 offset-lg-1">
+          <div class="naccs">
+            <div class="tabs">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="menu">
+                    {% for item in all%}
+                    {% if item.clas %}
+                    <div class="active">
+                      <img src="{{item.image.url}}" alt="">
+                      <h4>{{item.f_name}}</h4>
+                      <span>{{item.post}}</span>
+                    </div>
+                    {% else %}
+                    <div >
+                      <img src="{{item.image.url}}" alt="">
+                      <h4>{{item.f_name}}</h4>
+                      <span>{{item.post}}</span>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <ul class="nacc">
+        
+                    {% for item in all %}
+                    {% if item.clas %}
+                    <li class="active">
+                      <div>
+                        <div class="left-content">
+                          <h4>{{item.f_name}}</h4>
+                          <p>{{item.discription}}</p>
+                          {% for link in item.link1.all %}
+                          <span><a href="{{link.link}}">{{link.title1}}</a></span>
+                          {% endfor %}
+                          <!-- <span class="last-span"><a href="#">Linkedin</a></span> -->
+                          <div class="text-button">
+                            <a href="{% url 'contact' %}">Contact Member</a>
+                          </div>
+                        </div>
+                        <div class="right-image">
+                          <img src="{{item.image.url}}" alt="">
+                        </div>
+                      </div>
+                    </li>
+                    {% else %}
+                    <li >
+                      <div>
+                        <div class="left-content">
+                          <h4>{{item.f_name}}</h4>
+                          <p>{{item.discription}}</p>
+
+
+                          {% for link in item.link1.all %}
+                          <span><a href="{{link.link}}">{{link.title1}}</a></span>
+                          {% endfor %}
+                          <!-- <span><a href="#">Twitter</a></span> -->
+                          <!-- <span class="last-span"><a href="#">Linkedin</a></span> -->
+                          <div class="text-button">
+                            <a href="{{item.contact}}">Contact Member</a>
+                          </div>
+                        </div>
+                        <div class="right-image">
+                          <img src="{{item.image.url}}" alt="">
+                        </div>
+                      </div>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                
+                    
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <section class="simple-cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 offset-lg-1">
+          <div class="left-image">
+            <img src="{% static 'assets/images/cta-left-image.png' %}" alt="">
+          </div>
+        </div>
+        <div class="col-lg-5 align-self-center">
+          <h6>Получите Скидку сейчас до 16 мая!</h6>
+          <h4>На покупку второго курса 30% скидки</h4>
+          <p>Так же есть оплата в рассрочку через банк.</p>
+          <div class="white-button">
+            <a href="{% url 'cource' %}">Наши курсы</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h6>Цитаты</h6>
+            <h4>В мире технологии <em> Топ Программистов</em></h4>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="owl-testimonials owl-carousel" style="position: relative; z-index: 5;">
+            <div class="item">
+              <p>“Программирование сегодня — это гонка разработчиков программ, стремящихся писать программы с большей и лучшей идиотоустойчивостью, и вселенной, которая пытается создать больше отборных идиотов. Пока вселенная побеждает”</p>
+                <h4>Джеймс Ричард Кук</h4>
+                <span>Писатель &amp;Инженер</span>
+                <img src="{% static 'assets/images/quote.png' %}" alt="">
+            </div>
+            <div class="item">
+              <p>“Низкоуровневый язык — это когда требуется внимание к вещам, которые никак не связаны с программами на этом языке”</p>
+                <h4>Алан Джей Перлис</h4>
+                <span>Создатель ЭВМ Whirlwind</span>
+                <img src="{% static 'assets/images/quote.png' %}" alt="">
+            </div>
+            <div class="item">
+              <p>“Программирование на С похоже на быстрые танцы на только что отполированном полу людей с острыми бритвами в руках”</p>
+                <h4>Валди Равенс</h4>
+                <span>Хаккер</span>
+                <img src="{% static 'assets/images/quote.png' %}" alt="">
+            </div>
+            <div class="item">
+              <p>“Не волнуйтесь, если что-то не работает. Если бы всё работало, вас бы уволили.”</p>
+                <h4>Том Редминд</h4>
+                <span>Один из создателей C#</span>
+                <img src="{% static 'assets/images/quote.png' %}" alt="">
+            </div>
+            <div class="item">
+              <p>“В хорошем дизайне добавление чего-то стоит дешевле, чем сама эта вещь.”</p>
+                <h4>Том Гейл</h4>
+                <span>Авто дизайнер</span>
+                <img src="{% static 'assets/images/quote.png' %}" alt="">
+            </div>
+            <div class="item">
+              <p>“Я изобрел понятие «объектно-ориентированный», и могу заявить, что не имел в виду C++.”</p>
+                <h4>Алан Кёртис Кэй</h4>
+                <span>Создатель ООП</span>
+                <img src="{% static 'assets/images/quote.png' %}" alt="">
+            </div>
+            <div class="item">
+              <p>“Измерять продуктивность программиста подсчетом строк кода — это так же, как оценивать постройку самолета по его весу.”</p>
+                <h4>Билл Гейтс</h4>
+                <span>Основатель Майкрософт</span>
+                <img src="{% static 'assets/images/quote.png' %}" alt="">
+            </div>
+            <div class="item">
+              <p>“Многие из вас знакомы с достоинствами программиста. Их всего три, и разумеется это: лень, нетерпеливость и гордыня.”</p>
+                <h4>Ларри Уолл</h4>
+                <span>Создатель Perl</span>
+                <img src="{% static 'assets/images/quote.png' %}" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-us our-office">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="left-info">
+            <div class="section-heading">
+              <h6>Наш Офис</h6>
+              <h4>Узнайте о нас по ближе <em>IT Soft Space</em></h4>
+            </div>
+            <p>Наш офис оснащён новой цифровой технологией так же зоной отдыха <br>в свободное время учащийся смогут перекусить в нашем буфете, <br>так же смотреть фильмы в жанре киберхак.</p>
+            <ul>
+              <li>- Офис находиться в центре города.</li>
+              <li>- Рядом с офисом находиться развяска маршрутов по городу.</li>
+              <li>- Инфоструктура города так же находиться неподалёку.</li>
+              <li></li>
+            </ul>
+            <div class="main-button-gradient">
+              <a href="{% url 'service' %}">Наши Сервисы</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div id="video">
+            <div class="thumb">
+              <img src="{% static 'assets/images/video-thumb.jpg' %}" alt="">
+              <div class="play-button">
+                <a rel="nofollow" href="https://www.youtube.com/templatemo" target="_blank"><i class="fa fa-play"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <ul class="social-icons">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-rss"></i></a></li>
+            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-lg-12">
+          <p class="copyright">Copyright © 2022 IT Soft Space., Ltd. All Rights Reserved. 
+          
+          <br>Design: <a rel="sponsored" href="https://templatemo.com" target="_blank">Martan</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/video.js"></script>
+    <script src="assets/js/slick-slider.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+          e.preventDefault();
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
+    {% endblock blockcontent %}
+</body>
+</html>

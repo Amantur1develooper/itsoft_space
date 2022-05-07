@@ -1,0 +1,333 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>IT Soft Space</title>
+ 
+    {% block title %}Наши Услуги{% endblock title %}
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-eduwell-style.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+<!--
+
+TemplateMo 573 EduWell
+
+https://templatemo.com/tm-573-eduwell
+
+-->
+  </head>
+
+<body>
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                <nav class="main-nav">
+                  <!-- ***** Logo Start ***** -->
+                  <a href="{% url 'index' %}" class="logo"> <span>IT Soft Space</span></a>
+                  <!-- ***** Logo End ***** -->
+                  <!-- ***** Menu Start ***** -->
+                  <ul class="nav">
+                    <li><a href="{% url 'index' %}" class="active">Главное</a></li>
+                    <li><a href="{% url 'index' %}">Сервисы</a></li>
+                    <li><a href="{% url 'index' %}">Курсы</a></li>
+                    <li class="has-sub">
+                        <a href="javascript:void(0)">Страницы</a>
+                        <ul class="sub-menu">
+                            <li><a href="{% url 'about' %}">О нас</a></li>
+                            <li><a href="{% url 'service' %}">Наши Сервисы</a></li>
+                            <li><a href="{% url 'contact' %}">Контакты</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li><a href="index.html">Цитаты</a></li>  -->
+                    <li><a href="index.html">Контакты</a></li> 
+                  </ul>     
+                  <a class='menu-trigger'>
+                      <span>Меню</span>
+                  </a>
+                  <!-- ***** Menu End ***** -->
+                </nav>
+              </div>
+          </div>
+      </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+  {% block blockcontent %}
+  {% load static %}
+  <section class="page-heading">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="header-text">
+            <h4></h4>
+            <h1>Наши Услуги</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id='service' class="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h6>Сервиз наших услуг</h6>
+            <h4>Виды <em>Услуг</em></h4>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="owl-service-item owl-carousel">
+            <div class="item">
+              <div class="service-item">
+                <div class="icon">
+                  <img src="{% static 'assets/images/service-icon-01.png' %}" alt="">
+                </div>
+                <h4>Создание Сайтов</h4>
+                <p>Разработка сайта под ваши требование с нуля.</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="service-item">
+                <div class="icon">
+                  <img src="{% static 'assets/images/service-icon-02.png' %}" alt="">
+                </div>
+                <h4>Разработка программного обеспечивание</h4>
+                <p>Создание готового под ключ программного обеспечивание для вашего бизнеса и для личного пользование.</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="service-item">
+                <div class="icon">
+                  <img src="{% static 'assets/images/service-icon-03.png' %}" alt="">
+                </div>
+                <h4>Дизайн</h4>
+                <p>Создание логотипов и брэнд бука и брэнч бука.</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="service-item">
+                <div class="icon">
+                  <img src="{% static 'assets/images/service-icon-04.png' %}" alt="">
+                </div>
+                <h4>СММ, Таргет и SEO</h4>
+                <p>Оптимизация сайта продвижение и таргет вашего продукта также сервиз вашего сайта.</p>
+              </div>
+            </div>
+          
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="simple-cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 offset-lg-1">
+          <div class="left-image">
+            <img src="{% static 'assets/images/cta-left-image.png' %}" alt="">
+          </div>
+        </div>
+        <div class="col-lg-5 align-self-center">
+          <h6>Получите Скидку сейчас до 16 мая!</h6>
+          <h4>На покупку второго курса 30% скидки</h4>
+          <p>Так же есть оплата в рассрочку через банк.</p>
+          <div class="white-button">
+            <a href="{% url 'cource' %}">Наши Курсы</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured-product">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h6></h6>
+            <h4>Наши готовые <em>продукты</em></h4>
+          </div>
+        </div>
+        <div class="col-lg-3 align-self-center">
+          <div class="left-info">
+            <div class="col-lg-12">
+              <div class="info-item">
+                <div class="icon">
+                  <img src="{% static 'assets/images/service-icon-01.png' %}" alt="">
+                </div>
+                <h4>Оптимизация Продукта</h4>
+                <p>Готовоя программа для оптимизации вашего бизнеса.</p>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="info-item last-info">
+                <div class="icon">
+                  <img src="{% static 'assets/images/service-icon-01.png' %}" alt="">
+                </div>
+                <h4>Базы данных для Скалада</h4>
+                <p>Управление вашими товарами и услугами склада.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="product-image">
+            <img src="{% static 'assets/images/featured-product.jpg' %}" alt="">
+          </div>
+        </div>
+        <div class="col-lg-3 align-self-center">
+          <div class="right-info">
+            <div class="col-lg-12">
+              <div class="info-item">
+                <div class="icon">
+                  <img src="{% static 'assets/images/service-icon-01.png' %}" alt="">
+                </div>
+                <h4>Создание Сайта</h4>
+                <p>Создание сайтов с нуля под ваши критерии и так же индивидуальный дизайн для каждого.</p>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="info-item last-info">
+                <div class="icon">
+                  <img src="{% static 'assets/images/service-icon-01.png' %}" alt="">
+                </div>
+                <h4>Брендирование вашего продукта</h4>
+                <p>Полный пакет для продавжи вашего бизнеса как франшиза.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-us our-office">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="left-info">
+            <div class="section-heading">
+              <h6>Наш Офис</h6>
+              <h4>Узнайте о нас по ближе <em>IT Soft Space</em></h4>
+            </div>
+            <p>Наш офис оснащён новой цифровой технологией так же зоной отдыха <br>в свободное время учащийся смогут перекусить в нашем буфете, <br>так же смотреть фильмы в жанре киберхак.</p>
+            <ul>
+              <li>- Офис находиться в центре города.</li>
+              <li>- Рядом с офисом находиться развяска маршрутов по городу.</li>
+              <li>- Инфоструктура города так же находиться неподалёку.</li>
+              <li></li>
+            </ul>
+            <div class="main-button-gradient">
+              <a href="#service">Наши Сервисы</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div id="video">
+            <div class="thumb">
+              <img src="{% static 'assets/images/video-thumb.jpg' %}" alt="">
+              <div class="play-button">
+                <a rel="nofollow" href="https://www.youtube.com/templatemo" target="_blank"><i class="fa fa-play"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <ul class="social-icons">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-rss"></i></a></li>
+            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-lg-12">
+          <p class="copyright">Copyright © 2022 IT Soft Space., Ltd. All Rights Reserved. 
+          
+          <br>Design: <a rel="sponsored" href="https://templatemo.com" target="_blank">Martan</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/video.js"></script>
+    <script src="assets/js/slick-slider.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+          e.preventDefault();
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
+      {% endblock blockcontent %}
+</body>
+
+</html>

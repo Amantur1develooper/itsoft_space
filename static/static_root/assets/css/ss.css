@@ -1,0 +1,18 @@
+.check_box{
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    margin-left: -1.2em;
+    background-color: url(off.svg);
+  }
+  .foot{
+      margin-bottom: -40em;
+  }
+  .ff{
+      text-align: center;
+      display: center;
+  }
+
+  .te{
+    font-family: 'Roboto', sans-serif;
+  }
